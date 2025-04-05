@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'echo "Hello World" && pwd '
+                sh 'docker build -t ransher_v1 . && docker run ransher_v1 '
             }
         }
     }
